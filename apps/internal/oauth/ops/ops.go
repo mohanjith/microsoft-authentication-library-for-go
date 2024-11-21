@@ -18,10 +18,10 @@ Usage is simple:
 package ops
 
 import (
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/accesstokens"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/internal/comm"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/wstrust"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/accesstokens"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/internal/comm"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/wstrust"
 )
 
 // HTTPClient represents an HTTP client.

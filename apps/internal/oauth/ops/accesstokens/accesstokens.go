@@ -26,12 +26,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/exported"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/internal/grant"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/wstrust"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/exported"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/internal/grant"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/wstrust"
 )
 
 const (

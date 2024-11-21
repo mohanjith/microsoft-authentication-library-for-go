@@ -11,12 +11,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/base"
-	internalTime "github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/json/types/time"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/fake"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/accesstokens"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/base"
+	internalTime "github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/json/types/time"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/fake"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/accesstokens"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
 	"github.com/montanaflynn/stats"
 )
 

@@ -24,13 +24,13 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/kylelemons/godebug/pretty"
 
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/cache"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/exported"
-	internalTime "github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/json/types/time"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/mock"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/fake"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/accesstokens"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/cache"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/exported"
+	internalTime "github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/json/types/time"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/mock"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/fake"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/accesstokens"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
 )
 
 // errorClient is an HTTP client for tests that should fail when confidential.Client sends a request
@@ -252,7 +252,7 @@ func TestAcquireTokenOnBehalfOf(t *testing.T) {
 	tenant := "tenant"
 	assertion := "assertion"
 	mockClient := mock.Client{}
-	// TODO: OBO does instance discovery twice before first token request https://github.com/AzureAD/microsoft-authentication-library-for-go/issues/351
+	// TODO: OBO does instance discovery twice before first token request https://github.com/mohanjith/microsoft-authentication-library-for-go/issues/351
 	mockClient.AppendResponse(mock.WithBody(mock.GetInstanceDiscoveryBody(lmo, tenant)))
 	mockClient.AppendResponse(mock.WithBody(mock.GetTenantDiscoveryBody(lmo, tenant)))
 	mockClient.AppendResponse(mock.WithBody(mock.GetAccessTokenBody(token, "", "rt", "", 3600)))
@@ -925,7 +925,7 @@ func TestWithClaims(t *testing.T) {
 					clientInfo = base64.RawStdEncoding.EncodeToString([]byte(`{"uid":"uid","utid":"utid"}`))
 					idToken = mock.GetIDToken(tenant, authority)
 					refreshToken = "rt"
-					// TODO: OBO does instance discovery twice before first token request https://github.com/AzureAD/microsoft-authentication-library-for-go/issues/351
+					// TODO: OBO does instance discovery twice before first token request https://github.com/mohanjith/microsoft-authentication-library-for-go/issues/351
 					mockClient.AppendResponse(mock.WithBody(mock.GetInstanceDiscoveryBody(lmo, tenant)))
 				}
 				mockClient.AppendResponse(mock.WithBody(mock.GetInstanceDiscoveryBody(lmo, tenant)))
@@ -1047,7 +1047,7 @@ func TestWithTenantID(t *testing.T) {
 				if method == "obo" {
 					idToken = mock.GetIDToken(test.tenant, test.authority)
 					refreshToken = "refresh-token"
-					// TODO: OBO does instance discovery twice before first token request https://github.com/AzureAD/microsoft-authentication-library-for-go/issues/351
+					// TODO: OBO does instance discovery twice before first token request https://github.com/mohanjith/microsoft-authentication-library-for-go/issues/351
 					mockClient.AppendResponse(mock.WithBody(mock.GetInstanceDiscoveryBody(lmo, test.tenant)))
 				}
 				mockClient.AppendResponse(mock.WithBody(mock.GetInstanceDiscoveryBody(lmo, test.tenant)))
@@ -1144,7 +1144,7 @@ func TestWithTenantID(t *testing.T) {
 		for i := 0; i < 3; i++ {
 			tenant := fmt.Sprint(i)
 			expected := fmt.Sprintf(authorityFmt, host, tenant)
-			// TODO: prevent redundant discovery requests https://github.com/AzureAD/microsoft-authentication-library-for-go/issues/351
+			// TODO: prevent redundant discovery requests https://github.com/mohanjith/microsoft-authentication-library-for-go/issues/351
 			mockClient.AppendResponse(mock.WithBody(mock.GetInstanceDiscoveryBody(host, tenant)), mock.WithCallback(checkForWrongTenant))
 			mockClient.AppendResponse(mock.WithBody(mock.GetTenantDiscoveryBody(host, tenant)), mock.WithCallback(checkForWrongTenant))
 			mockClient.AppendResponse(

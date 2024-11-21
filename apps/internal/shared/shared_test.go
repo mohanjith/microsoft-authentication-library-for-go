@@ -7,7 +7,7 @@ import (
 	stdJSON "encoding/json"
 	"testing"
 
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/json"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/json"
 
 	"github.com/kylelemons/godebug/pretty"
 )

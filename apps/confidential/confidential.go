@@ -21,15 +21,15 @@ import (
 	"os"
 	"strings"
 
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/cache"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/base"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/exported"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/accesstokens"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/options"
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/shared"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/cache"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/base"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/exported"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/accesstokens"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/oauth/ops/authority"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/options"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/internal/shared"
 )
 
 /*

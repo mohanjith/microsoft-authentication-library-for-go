@@ -3,7 +3,7 @@ package public_test
 import (
 	"context"
 
-	"github.com/AzureAD/microsoft-authentication-library-for-go/apps/public"
+	"github.com/mohanjith/microsoft-authentication-library-for-go/apps/public"
 )
 
 // This example demonstrates the general pattern for authenticating with MSAL Go:
